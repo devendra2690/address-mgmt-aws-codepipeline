@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main  # Trigger on pushes to the main branch
-env:
-    AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-    AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 permissions:
       id-token: write   # This is required for requesting the JWT
       contents: read     
@@ -44,4 +41,8 @@ jobs:
           environment_name: User-address-mgmt-env
           region: us-east-1
           version_label: build-${{ github.run_number }}
-          deployment_package: app.zip      
+          deployment_package: app.zip
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          BEANSTALK_DEPLOY_DEBUG: true  
