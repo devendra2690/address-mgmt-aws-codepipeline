@@ -9,6 +9,6 @@ public class HealthCheckController {
 
     @GetMapping("/health")
     public ResponseEntity<String> healthCheck() {
-        return ResponseEntity.ok("Application is healthy");
+        return ResponseEntity.ok("Application is healthy and very very sound");
     }
 }
