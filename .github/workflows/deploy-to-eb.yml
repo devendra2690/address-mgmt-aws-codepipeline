@@ -4,9 +4,7 @@ on:
   push:
     branches:
       - main  # Trigger on pushes to the main branch
-permissions:
-      id-token: write   # This is required for requesting the JWT
-      contents: read     
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -43,6 +41,5 @@ jobs:
           version_label: build-${{ github.run_number }}
           deployment_package: app.zip
         env:
-          AWS_ACCESS_KEY_ID: AKIAZQ3DSBPO772GCWWU
-          AWS_SECRET_ACCESS_KEY: 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
-          BEANSTALK_DEPLOY_DEBUG: true  
+          AWS_ACCESS_KEY_ID: kHJp84qJdepRoGTw/jDzrVlWE0uboRtvnfNjEDwa
+          AWS_SECRET_ACCESS_KEY: AKIAZQ3DSBPO772GCWWU
