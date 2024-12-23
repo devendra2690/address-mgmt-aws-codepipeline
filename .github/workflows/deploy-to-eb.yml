@@ -43,6 +43,6 @@ jobs:
           version_label: build-${{ github.run_number }}
           deployment_package: app.zip
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: AKIAZQ3DSBPO772GCWWU
+          AWS_SECRET_ACCESS_KEY: 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
           BEANSTALK_DEPLOY_DEBUG: true  
