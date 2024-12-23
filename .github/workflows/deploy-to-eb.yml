@@ -37,7 +37,7 @@ jobs:
         with:
           application_name: user-address-mgmt
           environment_name: User-address-mgmt-env
-          region: ${{ secrets.AWS_REGION }}
+          region: us-east-1
           version_label: build-${{ github.run_number }}
           deployment_package: app.zip
         env:
