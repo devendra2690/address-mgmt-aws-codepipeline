@@ -38,8 +38,8 @@ jobs:
           application_name: user-address-mgmt
           environment_name: User-address-mgmt-env
           region: us-east-1
-          version_label: build-${{ github.run_number }}
+          version_label: build-${{github.run_number}}
           deployment_package: app.zip
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
+          AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
