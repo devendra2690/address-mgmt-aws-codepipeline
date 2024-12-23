@@ -31,6 +31,9 @@ jobs:
           mv target/*.jar application.jar
           zip -r app.zip application.jar
 
+      - name: Debug Environment Variables
+        run: printenv | grep AWS   
+
       # Step 5: Deploy to Elastic Beanstalk
       - name: Deploy to Elastic Beanstalk
         env:
